@@ -1,0 +1,88 @@
+:root {
+    --primary-color: #ff6347;
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --white-color: #fff;
+    --border-color: #ddd;
+    --focus-color: #ff4500;
+}
+/*agregamos la fuente personalizada con @font-face, el nombre de la fuente es 'Montserrat-Medium' y la ruta es './assets/static/Montserrat-Medium.ttf'*/
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('./assets/static/Montserrat-Medium.ttf');
+} 
+.login-container {
+    color: var(--background-color);
+    display: block; 
+    text-align: center;
+    margin: 0 auto;
+    max-width: 300px;
+    max-height: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-family: 'Montserrat-medium', sans-serif;
+}
+.login-logo {
+    display: block; /*Display block sirve para que el logo ocupe toda la línea y se centre con margin auto*/
+    margin: 10px 0 0 0; /* Arriba 10px, resto 0 */
+    color: var(--primary-color);
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.login-title {
+    margin: 7px 0 25px 0; /* Sin margen arriba para que se pegue al logo */ 
+    /*el primero es el margen superior, el segundo es el margen derecho, el tercero es el margen inferior y el cuarto es el margen izquierdo*/
+    color: var(--text-color);
+    font-size: 1.1em;
+    font-weight: 400;
+}
+/* El input-group es un contenedor para cada grupo de etiqueta e input, para que se puedan separar con margen y padding */
+.input-group {
+    margin-bottom: 15px;
+    padding: 0 10px;
+}
+label {
+    display: block; /* Display block sirve para que la etiqueta ocupe toda la línea y se pueda separar del input con margen */
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-weight: bold;
+    text-align: left;
+}
+input[type="email"],
+input[type="password"] {
+    box-sizing: border-box; /* para que el input se ajuste al tamaño de la caja */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="button"]:hover {
+    background-color: var(--focus-color);
+}
+.register-link {
+    margin-top: 15px;
+    color: var(--text-color);
+    text-align: center;
+    font-size: small;
+}
+.register-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+.register-link a:hover {
+    text-decoration: underline;
+}
