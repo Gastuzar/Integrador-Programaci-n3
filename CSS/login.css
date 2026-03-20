@@ -11,7 +11,7 @@
     font-family: 'Montserrat-Medium';
     src: url('./assets/static/Montserrat-Medium.ttf');
 } 
-.login-container {
+.login {
     color: var(--background-color);
     display: block; 
     text-align: center;
@@ -24,8 +24,8 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     font-family: 'Montserrat-medium', sans-serif;
 }
-.login-logo {
-    display: block; /*Display block sirve para que el logo ocupe toda la línea y se centre con margin auto*/
+.login--logo {
+    display: block; /*Display block Ocupa todo el ancho disponible de su contenedor y comienza en una nueva línea.*/
     margin: 10px 0 0 0; /* Arriba 10px, resto 0 */
     color: var(--primary-color);
     font-size: 2em;
@@ -33,7 +33,7 @@
     letter-spacing: 2px;
 }
 
-.login-title {
+.login--title {
     margin: 7px 0 25px 0; /* Sin margen arriba para que se pegue al logo */ 
     /*el primero es el margen superior, el segundo es el margen derecho, el tercero es el margen inferior y el cuarto es el margen izquierdo*/
     color: var(--text-color);
@@ -41,48 +41,52 @@
     font-weight: 400;
 }
 /* El input-group es un contenedor para cada grupo de etiqueta e input, para que se puedan separar con margen y padding */
-.input-group {
+.input--group {
     margin-bottom: 15px;
-    padding: 0 10px;
+    /* padding: 0 10px; */
+    margin-bottom: 15px;
 }
-label {
+.login--label {
     display: block; /* Display block sirve para que la etiqueta ocupe toda la línea y se pueda separar del input con margen */
     margin-bottom: 5px;
     color: var(--text-color);
     font-weight: bold;
+    font-size: 0.9em;
     text-align: left;
 }
-input[type="email"],
-input[type="password"] {
+.login--input[type="email"],
+.login--input[type="password"] {
     box-sizing: border-box; /* para que el input se ajuste al tamaño de la caja */
     width: 100%;
     padding: 10px;
     border: 1px solid var(--border-color);
     border-radius: 5px;
 }
-input[type="button"] {
+.login--button[type="button"] {
     width: 100%;
+    margin: 0 auto;
     padding: 10px;
     background-color: var(--primary-color);
     color: var(--white-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s;
 }
-input[type="button"]:hover {
+.login--button[type="button"]:hover {
     background-color: var(--focus-color);
 }
-.register-link {
-    margin-top: 15px;
+.login--footer {
+    margin-top: 20px;
     color: var(--text-color);
     text-align: center;
-    font-size: small;
+    font-size: 0.8em;
 }
-.register-link a {
+.login--link {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
 }
-.register-link a:hover {
+.login--link:hover {
     text-decoration: underline;
 }
