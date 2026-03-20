@@ -11,12 +11,18 @@
     font-family: 'Montserrat-Medium';
     src: url('./assets/static/Montserrat-Medium.ttf');
 } 
+body {
+    margin : 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+} 
 .login {
-    color: var(--background-color);
-    display: block; 
+    width: 100%;
     text-align: center;
-    margin: 0 auto;
-    max-width: 300px;
+    max-width: 320px;
     max-height: 500px;
     padding: 20px;
     border: 1px solid #ccc;
