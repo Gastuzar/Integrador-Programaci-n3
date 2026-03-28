@@ -1,94 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel Admin</title>
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
-    <header>
-        <h1>Panel Admin</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="login.html">Cerrar Sesión</a></li>
+    <header class="header">
+        <h1 class="header__logo">Panel Admin</h1>
+            <nav class="header__nav">
+                <ul class="header__ul">
+                    <li class="header__li"><a href="index.html">Inicio</a></li>
+                    <li class="header__li"><a href="login.html">Cerrar Sesión</a></li>
                 </ul>
             </nav>
     </header>
-    <hr color="black">
-    <table border="1">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Imagen</th>
-                <th>Nombre</th>
-                <th>Categoria</th>
-                <th>Precio</th>
-                <th>Stock</th>
-                <th>Acciones</th>
+    <table class="table">
+        <thead class="table__thead">
+            <tr class="table__tr">
+                <th class="table__th">ID</th>
+                <th class="table__th">Imagen</th>
+                <th class="table__th">Nombre</th>
+                <th class="table__th">Categoria</th>
+                <th class="table__th">Precio</th>
+                <th class="table__th">Stock</th>
+                <th class="table__th">Acciones</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>01</td>
-                <td><img src="./assets/burger triple.jpg" alt="Hamburguesa triple" width="200" height="200"></td>
-                <td>Hamburguesa triple</td>
-                <td>Hamburguesas</td>
-                <td>15000</td>
-                <td>5</td>
-                <td>
-                    <button type="button">Editar</button>
-                    <button type="button">Eliminar</button>
+        <tbody class="table__tbody">
+            <tr class="table__tr">
+                <td class="table__td">01</td>
+                <td class="table__td"><img src="./assets/burger triple.jpg" alt="Hamburguesa triple" width="200" height="200"></td>
+                <td class="table__td">Hamburguesa triple</td>
+                <td class="table__td">Hamburguesas</td>
+                <td class="table__td">15000</td>
+                <td class="table__td">5</td>
+                <td class="table__td">
+                    <a href="#" class="table__btn--editar" data-id="1">Editar</a>
+                    <button class="table__btn--eliminar" data-id="1">Eliminar</button>
                 </td>
             </tr>
-            <tr>
-                <td>02</td>
-                <td><img src="./assets/burger doble.jpg" alt="Hamburguesa doble" width="200" height="200"></td>
-                <td>Hamburguesa doble</td>
-                <td>Hamburguesas</td>
-                <td>12000</td>
-                <td>3</td>
-                <td>
-                    <button type="button">Editar</button>
-                    <button type="button">Eliminar</button>
+            <tr class="table__tr">
+                <td class="table__td">02</td>
+                <td class="table__td"><img src="./assets/burger doble.jpg" alt="Hamburguesa doble" width="200" height="200"></td>
+                <td class="table__td">Hamburguesa doble</td>
+                <td class="table__td">Hamburguesas</td>
+                <td class="table__td">12000</td>
+                <td class="table__td">3</td>
+                <td class="table__td">
+                    <a href="#" class="table__btn--editar" data-id="1">Editar</a>
+                    <button class="table__btn--eliminar" data-id="1">Eliminar</button>
                 </td>
             </tr>
-            <tr>
-                <td>03</td>
-                <td><img src="./assets/pizza.jpg" alt="Pizza" width="200" height="200"></td>
-                <td>Pizza</td>
-                <td>Pizzas</td>
-                <td>13000</td>
-                <td>8</td>
-                <td>
-                    <button type="button">Editar</button>
-                    <button type="button">Eliminar</button>
+            <tr class="table__tr">
+                <td class="table__td">03</td>
+                <td class="table__td"><img src="./assets/pizza.jpg" alt="Pizza" width="200" height="200"></td>
+                <td class="table__td">Pizza</td>
+                <td class="table__td">Pizzas</td>
+                <td class="table__td">13000</td>
+                <td class="table__td">8</td>
+                <td class="table__td">
+                    <a href="#" class="table__btn--editar" data-id="1">Editar</a>
+                    <button class="table__btn--eliminar" data-id="1">Eliminar</button>
                 </td>
             </tr>
         </tbody>
     </table>
     <br>
-    <details>
-        <form > <strong>Agregar Producto Rapido</strong>
+    <details class="details">
+        <summary class="details__summary"><strong>Agregar Producto Rápido</strong></summary>
+        <form class="details__form">
             <hr>
-            <div >
-                <label for="nombre">Nombre del Producto:</label>
-                <input id="nombre" type="text" placeholder="Ej: Hamburguesa Doble">
+            <div class="details__form-group">
+                <label class="details__form-label" for="nombre">Nombre del Producto:</label>
+                <input class="details__form-input" id="nombre" type="text" placeholder="Ej: Hamburguesa Doble">
             </div>
             <br>
-            <div >
-                <label for="precio">Precio:</label>
-                <input id="precio" type="number" placeholder="Ej: 10000">
+            <div class="details__form-group">
+                <label class="details__form-label" for="precio">Precio:</label>
+                <input class="details__form-input" id="precio" type="number" placeholder="Ej: 10000">
             </div>
             <br>
-            <div>
-                <label for="stock">Stock Inicial:</label>
-                <input id="stock" type="number" placeholder="Ej: 5">
+            <div class="details__form-group">
+                <label class="details__form-label" for="stock">Stock Inicial:</label>
+                <input class="details__form-input" id="stock" type="number" placeholder="Ej: 5">
             </div>
             <br>
-            <div >
-                <label for="categoria">Categoria:</label>
-                <select id="categoria">
+            <div class="details__form-group">
+                <label class="details__form-label" for="categoria">Categoria:</label>
+                <select class="details__form-input" id="categoria">
                     <option value="hamburguesas">Hamburguesas</option>
                     <option value="pizzas">Pizzas</option>
                     <option value="papas">Papas Fritas</option>
@@ -96,16 +97,16 @@
                 </select>
             </div>
             <br>
-            <div >
-                <label for="Descripcion">Descripcion:</label>
-                <textarea id="Descripcion" placeholder="Ej: Deliciosa hamburguesa con triple de carne y queso derretido."></textarea>
+            <div class="details__form-group">
+                <label class="details__form-label" for="descripcion">Descripcion:</label>
+                <textarea class="details__form-input" id="descripcion" placeholder="Ej: Deliciosa hamburguesa con triple de carne y queso derretido."></textarea>
             </div>
             <br>
-            <button type="submit">Guardar Producto</button>
+            <button class="details__form-button" type="submit">Guardar Producto</button>
         </form>
     </details>
-    <footer>
-        <p>Panel de administracion - Food Store v1.0</p>
+    <footer class="footer">
+        <p class="footer__p">Panel de administracion - Food Store v1.0</p>
     </footer>
 </body>
 </html>

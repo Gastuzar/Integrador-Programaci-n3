@@ -1,61 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Store</title>
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
-    <header>
-        <h1>Food Store</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#">Mis Pedidos</a></li>
-                    <li><a href="#">Carrito</a></li>
-                    <li><a href="./admin.html">Panel Admin</a></li>
+    <header class="header">
+        <h1 class="header__logo">Food Store</h1>
+            <nav class="header__nav">
+                <ul class="header__ul">
+                    <li class="header__li"><a href="index.html">Inicio</a></li>
+                    <li class="header__li"><a href="#">Mis Pedidos</a></li>
+                    <li class="header__li"><a href="#">Carrito</a></li>
+                    <li class="header__li"><a href="./admin.html">Panel Admin</a></li>
                 </ul>
             </nav>
     </header>
     <hr>
-    <aside>
-        <h2>Categorias</h2>
-        <ul>
-            <li><a href="#">Todos</a></li>
-            <li><a href="#">Hamburguesas</a></li>
-            <li><a href="#">Pizzas</a></li>
-            <li><a href="#">Papas Fritas</a></li>
-            <li><a href="#">Bebidas</a></li>
-        </ul>
-    </aside>
-    <main>
-        <form>
-            <label for="buscarProductos">Buscar productos</label>
-            <input id="buscarProductos" type="text" placeholder="Ej: Hamburguesa">
-            <button type="submit">Buscar</button>
-        </form>
-        <section>
-            <h2>Productos Destacados</h2>
-            <article>
-                <img src="./assets/burger triple.jpg" alt="Hamburguesa triple" width="200" height="200">
-                <h3>Hamburgesa triple</h3>
-                <p>Deliciosa hamburguesa con triple de carne y queso derretido.</p>
-                <p>Precio: <strong>$15000</strong></p>
-                <button type="button">Ver Detalles</button><button type="button">Agregar al carrito</button> 
-            </article>
-            <br>
-            <article>
-                <img src="./assets/pizza.jpg" alt="Pizza" width="200" height="200">
-                <h3>Pizza</h3>
-                <p>Deliciosa pizza con ingredientes frescos y salsa especial.</p>
-                <p>Precio: <strong>$12000</strong></p>
-                <button type="button">Ver Detalles</button><button type="button">Agregar al carrito</button> 
-            </article>
-        </section>
-    </main>
-    <footrer>
-        <p>&copy; 2026 Food Store. Todos los derechos reservados.</p>
-        <p>Contacto: <a href="mailto:info@foodstore.com">info@foodstore.com</a></p>
-    </footrer>
+    <div class="layout-container">
+        <aside class="aside">
+            <h2 class="aside__title">Categorias</h2>
+            <ul class="aside__ul" id="lista-categorias"></ul>
+        </aside>
+        <main class="main">
+            <form class="main__form">
+                <label class="main__label" for="buscarProductos">Buscar productos</label>
+                <input class="main__input" id="buscarProductos" type="text" placeholder="Ej: Hamburguesa">
+                <button class="main__button" type="submit">Buscar</button>
+            </form>
+                <h2 class="main__title">Productos Destacados</h2>
+                <section class="main__section" id="contenedor-productos"></section> 
+        </main>  
+    </div>      
+    <footer class="footer">
+        <p class="footer__p">&copy; 2026 Food Store. Todos los derechos reservados.</p>
+        <p class="footer__p">Contacto: <a href="mailto:info@foodstore.com">info@foodstore.com</a></p>
+    </footer>
+    <script src="./js/data.js"></script>
+    <script src="./js/main.js"></script> 
 </body>
 </html>
