@@ -9,7 +9,7 @@ const cargarCategorias = () => {
 cargarCategorias();
 
 const cargarProductos = () => {
-    let contenedorProductos = document.getElementById("contenedor-productos"); 
+    const contenedorProductos = document.getElementById("contenedor-productos"); 
     productos.forEach(producto => { 
         contenedorProductos.innerHTML += `
         <article class="article">
@@ -29,5 +29,18 @@ const botonesAgregar = document.querySelectorAll(".article__button-agregar"); //
 botonesAgregar.forEach(boton => { //agrego un evento de clic a cada boton para mostrar los detalles del producto o agregarlo al carrito
     boton.addEventListener("click", () => {
         alert("Producto agregado al carrito"); //Muestro una alerta al hacer clic en el botón de agregar al carrito
+    });
+});
+
+const botonesDetalle = document.querySelectorAll(".article__button-ver"); //Selecciono el elemento del HTML donde se mostrará la alerta de producto agregado al carrito
+botonesDetalle.forEach(boton => { 
+    boton.addEventListener("click", () => {
+        const productoEncontrado = productos.find(producto => producto.id === parseInt(boton.dataset.id));//boton.dataset.id es el valor del atributo data-id en el HTML
+
+        if (productoEncontrado) {
+            alert(`Detalles del producto:\n\nNombre: ${productoEncontrado.nombre}\nDescripcion: ${productoEncontrado.descripcion}\nPrecio: $${productoEncontrado.precio}`);
+        } else {
+            alert("Producto no encontrado");
+        }
     });
 });
